@@ -21,6 +21,10 @@
 		A5C3C78B189ECB5A00BDBA93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C3C76D189ECB5A00BDBA93 /* UIKit.framework */; };
 		A5C3C793189ECB5A00BDBA93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5C3C791189ECB5A00BDBA93 /* InfoPlist.strings */; };
 		A5C3C795189ECB5A00BDBA93 /* NotificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C3C794189ECB5A00BDBA93 /* NotificationTests.m */; };
+		A5E07DF6189F8D7F0029C099 /* TTGovernment.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E07DF5189F8D7F0029C099 /* TTGovernment.m */; };
+		A5E07DF9189F8DB70029C099 /* TTDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E07DF8189F8DB70029C099 /* TTDoctor.m */; };
+		A5E07DFC189F8DE20029C099 /* TTPensioner.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E07DFB189F8DE20029C099 /* TTPensioner.m */; };
+		A5E07DFF189F8E190029C099 /* TTBusinessman.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E07DFE189F8E190029C099 /* TTBusinessman.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		A5C3C790189ECB5A00BDBA93 /* NotificationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotificationTests-Info.plist"; sourceTree = "<group>"; };
 		A5C3C792189ECB5A00BDBA93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A5C3C794189ECB5A00BDBA93 /* NotificationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationTests.m; sourceTree = "<group>"; };
+		A5E07DF4189F8D7F0029C099 /* TTGovernment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGovernment.h; sourceTree = "<group>"; };
+		A5E07DF5189F8D7F0029C099 /* TTGovernment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGovernment.m; sourceTree = "<group>"; };
+		A5E07DF7189F8DB70029C099 /* TTDoctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDoctor.h; sourceTree = "<group>"; };
+		A5E07DF8189F8DB70029C099 /* TTDoctor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTDoctor.m; sourceTree = "<group>"; };
+		A5E07DFA189F8DE20029C099 /* TTPensioner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTPensioner.h; sourceTree = "<group>"; };
+		A5E07DFB189F8DE20029C099 /* TTPensioner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTPensioner.m; sourceTree = "<group>"; };
+		A5E07DFD189F8E190029C099 /* TTBusinessman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTBusinessman.h; sourceTree = "<group>"; };
+		A5E07DFE189F8E190029C099 /* TTBusinessman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTBusinessman.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,14 @@
 				A5C3C77B189ECB5A00BDBA93 /* Main.storyboard */,
 				A5C3C77E189ECB5A00BDBA93 /* TTViewController.h */,
 				A5C3C77F189ECB5A00BDBA93 /* TTViewController.m */,
+				A5E07DF4189F8D7F0029C099 /* TTGovernment.h */,
+				A5E07DF5189F8D7F0029C099 /* TTGovernment.m */,
+				A5E07DF7189F8DB70029C099 /* TTDoctor.h */,
+				A5E07DF8189F8DB70029C099 /* TTDoctor.m */,
+				A5E07DFA189F8DE20029C099 /* TTPensioner.h */,
+				A5E07DFB189F8DE20029C099 /* TTPensioner.m */,
+				A5E07DFD189F8E190029C099 /* TTBusinessman.h */,
+				A5E07DFE189F8E190029C099 /* TTBusinessman.m */,
 				A5C3C781189ECB5A00BDBA93 /* Images.xcassets */,
 				A5C3C770189ECB5A00BDBA93 /* Supporting Files */,
 			);
@@ -251,8 +271,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C3C77A189ECB5A00BDBA93 /* TTAppDelegate.m in Sources */,
+				A5E07DFC189F8DE20029C099 /* TTPensioner.m in Sources */,
 				A5C3C776189ECB5A00BDBA93 /* main.m in Sources */,
+				A5E07DF6189F8D7F0029C099 /* TTGovernment.m in Sources */,
+				A5E07DF9189F8DB70029C099 /* TTDoctor.m in Sources */,
 				A5C3C780189ECB5A00BDBA93 /* TTViewController.m in Sources */,
+				A5E07DFF189F8E190029C099 /* TTBusinessman.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +485,7 @@
 				A5C3C79A189ECB5A00BDBA93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5C3C79B189ECB5A00BDBA93 /* Build configuration list for PBXNativeTarget "NotificationTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +494,7 @@
 				A5C3C79D189ECB5A00BDBA93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
