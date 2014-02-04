@@ -14,4 +14,6 @@
 
 @property (assign,nonatomic) CGFloat taxesLevel;
 @property (assign,nonatomic) CGFloat averagePrice;
+@property (assign,nonatomic) CGFloat inflation;
+
 @end
