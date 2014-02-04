@@ -12,11 +12,13 @@ NSString * const TTGovernmentPensionLevelDidChangeNotification = @"TTGovernmentP
 NSString * const TTGovernmentTaxesLevelDidChangeNotification = @"TTGovernmentTaxesLevelDidChangeNotification";
 NSString * const TTGovernmentSalaryLevelDidChangeNotification = @"TTGovernmentSalaryLevelDidChangeNotification";
 NSString * const TTGovernmentAveragePriceDidChangeNotification = @"TTGovernmentAveragePriceDidChangeNotification";
+NSString * const TTGovernmentInitNotification = @"TTGovernmentInitNotification";
 
 NSString * const TTGovernmentPensionLevelUserInfo = @"TTGovernmentPensionLevelUserInfo";
 NSString * const TTGovernmentTaxesLevelUserInfo = @"TTGovernmentTaxesLevelUserInfo";
 NSString * const TTGovernmentSalaryLevelUserInfo = @"TTGovernmentSalaryLevelUserInfo";
 NSString * const TTGovernmentAveragePriceUserInfo = @"TTGovernmentAveragePriceUserInfo";
+NSString * const TTGovernmentInitNotificationUserInfo = @"TTGovernmentInitNotificationUserInfo";
 
 @implementation TTGovernment
 
@@ -31,6 +33,17 @@ NSString * const TTGovernmentAveragePriceUserInfo = @"TTGovernmentAveragePriceUs
         _salaryLevel = salaryLevel;
         _averagePrice = averagePrice;
     }
+    
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [NSNumber numberWithFloat:pensionLevel],TTGovernmentPensionLevelUserInfo,
+                                [NSNumber numberWithFloat:taxesLevel],TTGovernmentTaxesLevelUserInfo,
+                                [NSNumber numberWithFloat:salaryLevel],TTGovernmentSalaryLevelUserInfo,
+                                [NSNumber numberWithFloat:averagePrice],TTGovernmentAveragePriceUserInfo, nil];
+    
+    [[NSNotificationCenter defaultCenter]postNotificationName:TTGovernmentInitNotification
+                                                       object:nil
+                                                     userInfo:dictionary];
+    
     return self;
 }
 
@@ -41,7 +54,8 @@ NSString * const TTGovernmentAveragePriceUserInfo = @"TTGovernmentAveragePriceUs
                                                            forKey:TTGovernmentPensionLevelUserInfo];
     
     [[NSNotificationCenter defaultCenter]postNotificationName:TTGovernmentPensionLevelDidChangeNotification
-                                                       object:dictionary];
+                                                       object:nil
+                                                     userInfo:dictionary];
 }
 
 - (void)setSalaryLevel:(CGFloat)salaryLevel {
@@ -51,7 +65,8 @@ NSString * const TTGovernmentAveragePriceUserInfo = @"TTGovernmentAveragePriceUs
                                                            forKey:TTGovernmentSalaryLevelUserInfo];
     
     [[NSNotificationCenter defaultCenter]postNotificationName:TTGovernmentSalaryLevelDidChangeNotification
-                                                       object:dictionary];
+                                                       object:nil
+                                                     userInfo:dictionary];
 }
 
 - (void)setTaxesLevel:(CGFloat)taxesLevel {
@@ -61,7 +76,8 @@ NSString * const TTGovernmentAveragePriceUserInfo = @"TTGovernmentAveragePriceUs
                                                            forKey:TTGovernmentTaxesLevelUserInfo];
     
     [[NSNotificationCenter defaultCenter]postNotificationName:TTGovernmentTaxesLevelDidChangeNotification
-                                                       object:dictionary];
+                                                       object:nil
+                                                     userInfo:dictionary];
 }
 
 - (void)setAveragePrice:(CGFloat)averagePrice {
@@ -71,7 +87,8 @@ NSString * const TTGovernmentAveragePriceUserInfo = @"TTGovernmentAveragePriceUs
                                                            forKey:TTGovernmentAveragePriceUserInfo];
     
     [[NSNotificationCenter defaultCenter]postNotificationName:TTGovernmentAveragePriceDidChangeNotification
-                                                       object:dictionary];
+                                                       object:nil
+                                                     userInfo:dictionary];
 }
 
 @end

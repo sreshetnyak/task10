@@ -22,18 +22,37 @@
                                                 selector:@selector(averagePriceNotification:)
                                                     name:TTGovernmentAveragePriceDidChangeNotification
                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter]addObserver:self
+                                                selector:@selector(initNotification:)
+                                                    name:TTGovernmentInitNotification
+                                                  object:nil];
     }
     return self;
 }
 
+- (void)initNotification:(NSNotification *)notification {
+    CGFloat sl = [[notification.userInfo valueForKey:TTGovernmentSalaryLevelUserInfo]floatValue];
+    
+    _salaryLevel = sl;
+    
+    CGFloat ap = [[notification.userInfo valueForKey:TTGovernmentAveragePriceUserInfo]floatValue];
+    
+    _averagePrice = ap;
+}
+
 - (void)salaryLevelNotification:(NSNotification *)notification {
+    NSLog(@"salaryLevelNotification for %@",self.name);
+    CGFloat sl = [[notification.userInfo valueForKey:TTGovernmentSalaryLevelUserInfo]floatValue];
     
-    NSLog(@"salaryLevelNotification");
-    
+    _salaryLevel = sl;
 }
 
 - (void)averagePriceNotification:(NSNotification *)notification {
-    NSLog(@"averagePriceNotification");
+    NSLog(@"averagePriceNotification for %@",self.name);
+    CGFloat ap = [[notification.userInfo valueForKey:TTGovernmentAveragePriceUserInfo]floatValue];
+    
+    _averagePrice = ap;
 }
 
 - (void)dealloc {

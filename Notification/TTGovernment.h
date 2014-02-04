@@ -12,11 +12,13 @@ extern NSString * const TTGovernmentPensionLevelDidChangeNotification;
 extern NSString * const TTGovernmentTaxesLevelDidChangeNotification;
 extern NSString * const TTGovernmentSalaryLevelDidChangeNotification;
 extern NSString * const TTGovernmentAveragePriceDidChangeNotification;
+extern NSString * const TTGovernmentInitNotification;
 
 extern NSString * const TTGovernmentPensionLevelUserInfo;
 extern NSString * const TTGovernmentTaxesLevelUserInfo;
 extern NSString * const TTGovernmentSalaryLevelUserInfo;
 extern NSString * const TTGovernmentAveragePriceUserInfo;
+extern NSString * const TTGovernmentInitNotificationUserInfo;
 
 @interface TTGovernment : NSObject
 

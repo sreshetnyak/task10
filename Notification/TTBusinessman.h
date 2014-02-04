@@ -10,4 +10,8 @@
 
 @interface TTBusinessman : NSObject
 
+@property (strong,nonatomic) NSString *name;
+
+@property (assign,nonatomic) CGFloat taxesLevel;
+@property (assign,nonatomic) CGFloat averagePrice;
 @end

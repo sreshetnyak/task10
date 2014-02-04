@@ -10,4 +10,8 @@
 
 @interface TTPensioner : NSObject
 
+@property (strong,nonatomic) NSString *name;
+
+@property (assign,nonatomic) CGFloat pensionLevel;
+@property (assign,nonatomic) CGFloat averagePrice;
 @end
