@@ -51,6 +51,15 @@
 - (void)averagePriceNotification:(NSNotification *)notification {
     NSLog(@"averagePriceNotification for %@",self.name);
     CGFloat ap = [[notification.userInfo valueForKey:TTGovernmentAveragePriceUserInfo]floatValue];
+    _inflation = (ap - _averagePrice)/_averagePrice;
+    
+    if (_inflation > 0) {
+        NSlog(@"Doctor %@ dissatisfied",self.name);
+    } else if (_inflation == 0) {
+        NSlog(@"Doctor %@ not concerned",self.name);
+    } else if (_inflation < 0) {
+        NSlog(@"Doctor %@ is happy",self.name);
+    }
     
     _averagePrice = ap;
 }
