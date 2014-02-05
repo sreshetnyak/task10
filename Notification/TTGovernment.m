@@ -111,4 +111,8 @@ NSString * const TTGovernmentInitNotificationUserInfo = @"TTGovernmentInitNotifi
                                                      userInfo:dictionary];
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
 @end
