@@ -27,8 +27,28 @@
                                                 selector:@selector(initNotification:)
                                                     name:TTGovernmentInitNotification
                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter]addObserver:self
+                                                selector:@selector(sleepNotification:)
+                                                    name:UIApplicationDidEnterBackgroundNotification
+                                                  object:nil];
+        
+        [[NSNotificationCenter defaultCenter]addObserver:self
+                                                selector:@selector(wakeUpNotification:)
+                                                    name:UIApplicationWillEnterForegroundNotification
+                                                  object:nil];
     }
     return self;
+}
+
+- (void)sleepNotification:(NSNotification *)notification {
+    
+    NSLog(@"%@ going sleep",[self class]);
+}
+
+- (void)wakeUpNotification:(NSNotification *)notification {
+    
+    NSLog(@"%@ wake up",[self class]);
 }
 
 - (void)initNotification:(NSNotification *)notification {
@@ -57,11 +77,11 @@
     _inflation = (ap - _averagePrice)/_averagePrice;
     
     if (_inflation > 0) {
-        NSlog(@"Pensioner %@ dissatisfied",self.name);
+        NSLog(@"Pensioner %@ dissatisfied",self.name);
     } else if (_inflation == 0) {
-        NSlog(@"Pensioner %@ not concerned",self.name);
+        NSLog(@"Pensioner %@ not concerned",self.name);
     } else if (_inflation < 0) {
-        NSlog(@"Pensioner %@ is happy",self.name);
+        NSLog(@"Pensioner %@ is happy",self.name);
     }
     
     _averagePrice = ap;

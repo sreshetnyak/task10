@@ -21,6 +21,7 @@
 		A5C3C78B189ECB5A00BDBA93 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C3C76D189ECB5A00BDBA93 /* UIKit.framework */; };
 		A5C3C793189ECB5A00BDBA93 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A5C3C791189ECB5A00BDBA93 /* InfoPlist.strings */; };
 		A5C3C795189ECB5A00BDBA93 /* NotificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C3C794189ECB5A00BDBA93 /* NotificationTests.m */; };
+		A5D9894418A2358300037B36 /* TTAplicationDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9894318A2358300037B36 /* TTAplicationDelegate.m */; };
 		A5E07DF6189F8D7F0029C099 /* TTGovernment.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E07DF5189F8D7F0029C099 /* TTGovernment.m */; };
 		A5E07DF9189F8DB70029C099 /* TTDoctor.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E07DF8189F8DB70029C099 /* TTDoctor.m */; };
 		A5E07DFC189F8DE20029C099 /* TTPensioner.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E07DFB189F8DE20029C099 /* TTPensioner.m */; };
@@ -57,6 +58,8 @@
 		A5C3C790189ECB5A00BDBA93 /* NotificationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotificationTests-Info.plist"; sourceTree = "<group>"; };
 		A5C3C792189ECB5A00BDBA93 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A5C3C794189ECB5A00BDBA93 /* NotificationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationTests.m; sourceTree = "<group>"; };
+		A5D9894218A2358300037B36 /* TTAplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTAplicationDelegate.h; path = ../TTAplicationDelegate.h; sourceTree = "<group>"; };
+		A5D9894318A2358300037B36 /* TTAplicationDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTAplicationDelegate.m; path = ../TTAplicationDelegate.m; sourceTree = "<group>"; };
 		A5E07DF4189F8D7F0029C099 /* TTGovernment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTGovernment.h; sourceTree = "<group>"; };
 		A5E07DF5189F8D7F0029C099 /* TTGovernment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTGovernment.m; sourceTree = "<group>"; };
 		A5E07DF7189F8DB70029C099 /* TTDoctor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTDoctor.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 			children = (
 				A5C3C778189ECB5A00BDBA93 /* TTAppDelegate.h */,
 				A5C3C779189ECB5A00BDBA93 /* TTAppDelegate.m */,
+				A5D9894218A2358300037B36 /* TTAplicationDelegate.h */,
+				A5D9894318A2358300037B36 /* TTAplicationDelegate.m */,
 				A5C3C77B189ECB5A00BDBA93 /* Main.storyboard */,
 				A5C3C77E189ECB5A00BDBA93 /* TTViewController.h */,
 				A5C3C77F189ECB5A00BDBA93 /* TTViewController.m */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5D9894418A2358300037B36 /* TTAplicationDelegate.m in Sources */,
 				A5C3C77A189ECB5A00BDBA93 /* TTAppDelegate.m in Sources */,
 				A5E07DFC189F8DE20029C099 /* TTPensioner.m in Sources */,
 				A5C3C776189ECB5A00BDBA93 /* main.m in Sources */,

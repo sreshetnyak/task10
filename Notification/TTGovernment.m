@@ -44,7 +44,27 @@ NSString * const TTGovernmentInitNotificationUserInfo = @"TTGovernmentInitNotifi
                                                        object:nil
                                                      userInfo:dictionary];
     
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(sleepNotification:)
+                                                name:UIApplicationDidEnterBackgroundNotification
+                                              object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(wakeUpNotification:)
+                                                name:UIApplicationWillEnterForegroundNotification
+                                              object:nil];
+    
     return self;
+}
+
+- (void)sleepNotification:(NSNotification *)notification {
+    
+    NSLog(@"%@ going sleep",[self class]);
+}
+
+- (void)wakeUpNotification:(NSNotification *)notification {
+    
+    NSLog(@"%@ wake up",[self class]);
 }
 
 - (void)setPensionLevel:(CGFloat)pensionLevel {
